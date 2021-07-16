@@ -250,7 +250,7 @@ public class WhisperServerService extends Application<WhisperServerConfiguration
     final DistributionStatisticConfig defaultDistributionStatisticConfig = DistributionStatisticConfig.builder()
         .percentiles(.75, .95, .99, .999)
         .build();
-
+/*
     final WavefrontConfig wavefrontConfig = new WavefrontConfig() {
       @Override
       public String get(final String key) {
@@ -274,6 +274,8 @@ public class WhisperServerService extends Application<WhisperServerConfiguration
         return defaultDistributionStatisticConfig.merge(super.defaultHistogramConfig());
       }
     });
+*/
+/*
 
     {
       final DatadogMeterRegistry datadogMeterRegistry = new DatadogMeterRegistry(config.getDatadogConfiguration(), Clock.SYSTEM);
@@ -297,6 +299,8 @@ public class WhisperServerService extends Application<WhisperServerConfiguration
 
       Metrics.addRegistry(datadogMeterRegistry);
     }
+
+*/
 
     environment.getObjectMapper().configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
     environment.getObjectMapper().setVisibility(PropertyAccessor.ALL, JsonAutoDetect.Visibility.NONE);
