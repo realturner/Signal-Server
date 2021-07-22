@@ -59,7 +59,9 @@ public class S3ObjectMonitor implements Managed {
 
     this(S3Client.builder()
             .region(Region.of(s3Region))
-            .credentialsProvider(InstanceProfileCredentialsProvider.create())
+            /* To specify specific credential provider:
+               https://docs.aws.amazon.com/sdk-for-java/latest/developer-guide/credentials.html
+             */
             .build(),
         s3Bucket,
         objectKey,
